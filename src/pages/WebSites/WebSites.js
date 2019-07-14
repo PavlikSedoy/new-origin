@@ -2,7 +2,7 @@ import React from 'react';
 
 const WebSites = () => {
   return (
-    <div>
+    <div className="transition-container">
       from WebSites page
     </div>
   );
