@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-// import Styles from '../../App.module.scss'
 
 export class Home extends Component {
   state = {
@@ -19,7 +18,6 @@ export class Home extends Component {
 
   render() {
     const { titles, titlesIsLoaded } = this.state
-    console.log(titles)
 
     if (titlesIsLoaded) {
       return (
@@ -27,7 +25,7 @@ export class Home extends Component {
         //   <span className={Styles.test}>hello from home</span>
         // </div>
         <>
-          {/* <h1>{titles[0].title.rendered}</h1> */}
+          <h1>{titles[0]}</h1>
         </>
       )
     }

@@ -1,10 +1,12 @@
 import React from 'react'
-import { Switch, Route, Link } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import { Transition, TransitionGroup } from 'react-transition-group'
 import { play, exit } from './timelines'
 import Home from './pages/Home/Home'
 import WebSites from './pages/WebSites/WebSites'
 import NotFound from './pages/NotFound/NotFound'
+import NavBar from './components/NavBar/NavBar'
+import './App.module.scss'
 
 function App() {
   return (
@@ -13,11 +15,7 @@ function App() {
 
       return (
         <>
-          <nav>
-            <Link to="/">Home</Link>
-            <Link to="/websites">Web Sites</Link>
-            <Link to="/error">Error</Link>
-          </nav>
+          <NavBar />
           <TransitionGroup component={null}>
             <Transition
               key={key}

@@ -6,7 +6,7 @@ const getDefaultTimeline = (node, delay) => {
   // const content = node.querySelector('.transition-container')
 
   timeline
-    .from(node, 1, { display: 'none', x: -300, autoAlpha: 0, delay })
+    .from(node, 1, { display: 'none', autoAlpha: 0, delay })
     // .from(node, 0.3, { display: 'none', autoAlpha: 0, delay, ease: Power4.easeIn })
     // .from(content, 0.15, { autoAlpha: 0, y: 25, ease: Power4.easeInOut })
 
@@ -18,7 +18,7 @@ const getHomeTimeline = (node, delay) => {
   // const content = node.querySelector('.transition-container')
 
   timeline
-    .from(node, 1, { display: 'none', x: 300, autoAlpha: 0, delay })
+    .from(node, 1, { display: 'none', autoAlpha: 0, delay })
     // .from(node, 0.3, { display: 'none', x: 300, autoAlpha: 0, delay, ease: Power4.easeIn })
     // .from(content, 0.5, { autoAlpha: 0, y: 125, ease: Power4.easeInOut })
 
