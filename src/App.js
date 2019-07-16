@@ -6,6 +6,8 @@ import Home from './pages/Home/Home'
 import WebSites from './pages/WebSites/WebSites'
 import NotFound from './pages/NotFound/NotFound'
 
+import './App.scss'
+
 function App() {
   return (
     <Route render={({location}) => {

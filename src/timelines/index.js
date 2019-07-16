@@ -1,9 +1,9 @@
 import { TimelineMax } from "gsap";
-import GSAP from 'gsap-react-plugin'
+// import GSAP from 'gsap-react-plugin'
 
 const getDefaultTimeline = (node, delay) => {
   const timeline = new TimelineMax({ paused: true })
-  const content = node.querySelector('.transition-container')
+  // const content = node.querySelector('.transition-container')
 
   timeline
     .from(node, 1, { display: 'none', x: -300, autoAlpha: 0, delay })
@@ -15,7 +15,7 @@ const getDefaultTimeline = (node, delay) => {
 
 const getHomeTimeline = (node, delay) => {
   const timeline = new TimelineMax({ paused: true })
-  const content = node.querySelector('.transition-container')
+  // const content = node.querySelector('.transition-container')
 
   timeline
     .from(node, 1, { display: 'none', x: 300, autoAlpha: 0, delay })
