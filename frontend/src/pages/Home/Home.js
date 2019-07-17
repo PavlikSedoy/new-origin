@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import styles from './Home.module.scss'
 
 export class Home extends Component {
   state = {
@@ -24,9 +25,9 @@ export class Home extends Component {
         // <div className="transition-container">
         //   <span className={Styles.test}>hello from home</span>
         // </div>
-        <>
+        <div style={{ display: 'flex', alignItems: 'center', height: '100vh' }}>
           <h1>{titles[0]}</h1>
-        </>
+        </div>
       )
     }
 

@@ -1,4 +1,92 @@
+@import '../../vars';
+
 .NavBar {
-  position: relative;
-  background-color: #ccc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  width: 100%;
+  height: 115px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__leftSide, &__rightSide {
+    position: relative;
+    flex-basis: 50%;
+    align-items: center;
+    height: 115px;
+    display: flex;
+  }
+
+  &__rightSide {
+    justify-content: flex-end;
+  }
+
+  &__logo {
+    &_link {
+      position: relative;
+    }
+  }
+
+  &__phoneAndSocial {
+    position: relative;
+    margin-left: 105px;
+    display: flex;
+  }
+
+  // Phone Number
+  &__phone {
+    position: relative;
+  }
+
+  &__phoneLink {
+    position: relative;
+    color: $grayTextColor;
+    font-family: $montserratFont;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1.4px;
+    font-size: 14px;
+    transition: .3s ease;
+
+    &:hover {
+      color: $blackColor;
+    }
+  }
+
+  // Social icons
+  &__social {
+    position: relative;
+    display: flex;
+    margin-left: 50px;
+  }
+
+  // Consultation button
+  &__consultation {
+    position: relative;
+
+    &_btn {
+      font-family: $montserratFont;
+      font-weight: 700;
+      color: $grayTextColor;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1.4px;
+      transition: .3s ease;
+      outline: none;
+
+      &:hover {
+        color: $blackColor;
+      }
+    }
+  }
+
+  // Hamburger
+  &__hamburger {
+    position: relative;
+    margin-left: 60px;
+  }
 }

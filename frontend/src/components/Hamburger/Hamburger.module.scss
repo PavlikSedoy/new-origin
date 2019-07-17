@@ -1,0 +1,65 @@
+@import '../../vars';
+
+.Hamburger {
+  position: relative;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__active {
+    position: relative;
+  }
+
+  &__line {
+    position: relative;
+    height: 5px;
+    width: 100%;
+  }
+
+  &__topLine, &__centerLine, &__bottomLine {
+    position: relative;
+  }
+
+  // Top Line
+  &__topLine {
+    position: relative;
+  }
+
+  // Center Line
+  &__centerLine {
+    .Hamburger__centerDote {
+      background-color: $redColor;
+    }
+  }
+
+  // Bottom Line
+  &__bottomLine {
+    position: relative;
+  }
+
+  &__leftDote, &__centerDote, &__rightDote {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: $blackColor;
+    top: 0;
+  }
+
+  &__leftDote {
+    left: 0;
+  }
+
+  &__centerDote {
+    left: calc(50% - 2.5px);
+  }
+
+  &__rightDote {
+    left: calc(100% - 5px);
+  }
+}

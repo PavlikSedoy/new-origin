@@ -1,0 +1,27 @@
+// Montserrat
+// Bold
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../fonts/Montserrat/Bold/Montserrat-Bold.eot'); /* IE9 Compat Modes */
+  src: local('Montserrat'), local('Montserrat'),
+       url('../../fonts/Montserrat/Bold/Montserrat-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../fonts/Montserrat/Bold/Montserrat-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../fonts/Montserrat/Bold/Montserrat-Bold.woff') format('woff'), /* Modern Browsers */
+       url('../../fonts/Montserrat/Bold/Montserrat-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../fonts/Montserrat/Bold/Montserrat-Bold.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+// ExtraBold
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../../fonts/Montserrat/ExtraBold/Montserrat-ExtraBold.eot'); /* IE9 Compat Modes */
+  src: local('Montserrat'), local('Montserrat'),
+       url('../../fonts/Montserrat/ExtraBold/Montserrat-ExtraBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../fonts/Montserrat/ExtraBold/Montserrat-ExtraBold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../fonts/Montserrat/ExtraBold/Montserrat-ExtraBold.woff') format('woff'), /* Modern Browsers */
+       url('../../fonts/Montserrat/ExtraBold/Montserrat-ExtraBold.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../fonts/Montserrat/ExtraBold/Montserrat-ExtraBold.svg#Montserrat') format('svg'); /* Legacy iOS */
+}

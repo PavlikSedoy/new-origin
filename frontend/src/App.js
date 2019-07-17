@@ -6,6 +6,7 @@ import Home from './pages/Home/Home'
 import WebSites from './pages/WebSites/WebSites'
 import NotFound from './pages/NotFound/NotFound'
 import NavBar from './components/NavBar/NavBar'
+// import SocialIcon from './components/SocialIcon/SocialIcon'
 import './App.module.scss'
 
 function App() {
