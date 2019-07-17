@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import HeadScreen from '../../components/HeadScreen/HeadScreen'
 import axios from 'axios'
 import styles from './Home.module.scss'
 
@@ -22,12 +23,10 @@ export class Home extends Component {
 
     if (titlesIsLoaded) {
       return (
-        // <div className="transition-container">
-        //   <span className={Styles.test}>hello from home</span>
+        // <div style={{ display: 'flex', alignItems: 'center', height: '100vh' }}>
+        //   <h1>{titles[0]}</h1>
         // </div>
-        <div style={{ display: 'flex', alignItems: 'center', height: '100vh' }}>
-          <h1>{titles[0]}</h1>
-        </div>
+        <HeadScreen title={titles[0]} />
       )
     }
 

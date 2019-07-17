@@ -3,6 +3,9 @@
 .SocialIcon {
   position: relative;
   margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:first-child {
     margin-left: 0;

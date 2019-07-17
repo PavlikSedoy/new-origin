@@ -1,0 +1,38 @@
+@import '../../vars';
+
+.HeadNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  &__wr {
+    position: relative;
+    background-color: $blackColor;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    flex-basis: 25%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $blackColor;
+    color: $headNavGrayColor;
+    font-family: $montserratFont;
+    letter-spacing: 1.4px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    line-height: 1;
+
+    &:last-child {
+      background-color: $redColor;
+      color: $whiteColor;
+    }
+  }
+}
