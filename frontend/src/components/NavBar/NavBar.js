@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
+import Container from '../Container/Container'
+
 import styles from './NavBar.module.scss'
 
 export class NavBar extends Component {
@@ -13,7 +15,9 @@ export class NavBar extends Component {
           <Link to="/error">Error</Link>
         </nav> */}
 
-        Hello from navbar
+        <Container>
+          Hello from navbar
+        </Container>
       </div>
     )
   }

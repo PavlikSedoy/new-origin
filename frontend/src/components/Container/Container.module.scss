@@ -1,0 +1,31 @@
+.Container {
+  position: relative;
+  max-width: 1140px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .Container {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .Container {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .Container {
+    max-width: 540px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .Container {
+    max-width: 100%;
+  }
+}
