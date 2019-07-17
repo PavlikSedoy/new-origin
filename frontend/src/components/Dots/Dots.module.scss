@@ -1,0 +1,33 @@
+.Dots {
+  position: relative;
+  padding-left: 44px;
+
+  &__container {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    height: 100%;
+    width: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    
+    span {
+     position: relative;
+     width: 6px;
+     height: 6px;
+     background-color: rgb(235, 235, 235);
+     border-radius: 50%;
+     margin-top: 10px;
+
+     &:first-child, &:nth-child(2) {
+       margin-top: 0;
+     }
+
+     &:nth-child(2n) {
+       margin-left: 10px;
+     }
+    }
+  }
+
+}

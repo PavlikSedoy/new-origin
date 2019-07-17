@@ -11,6 +11,8 @@
   &__container {
     display: flex;
     justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   &__leftSide, &__rightSide {

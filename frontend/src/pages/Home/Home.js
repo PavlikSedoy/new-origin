@@ -7,6 +7,8 @@ export class Home extends Component {
   state = {
     titles: {},
     titlesIsLoaded: false,
+    descriptions: {},
+    descriptionsIsLoaded: false
   }
 
   componentDidMount() {
@@ -16,17 +18,25 @@ export class Home extends Component {
         titlesIsLoaded: true
       }))
       .catch(err => console.log(err))
+
+    axios.get(`/wp-json/wp/v2/title-descriptions?order=asc`)
+      .then(res => this.setState({
+        descriptions: res.data.map(desc => desc.acf.title_description_text),
+        descriptionsIsLoaded: true
+      }))
+      .catch(err => console.log(err))
   }
 
-  render() {
-    const { titles, titlesIsLoaded } = this.state
+  // descAgency = this.state.descriptions.map(desc => desc.id)
 
-    if (titlesIsLoaded) {
+  render() {
+    const { titles, titlesIsLoaded, descriptions, descriptionsIsLoaded } = this.state
+    const descAgency = descriptions[0]
+    const descAbout = descriptions[1]
+
+    if (titlesIsLoaded && descriptionsIsLoaded) {
       return (
-        // <div style={{ display: 'flex', alignItems: 'center', height: '100vh' }}>
-        //   <h1>{titles[0]}</h1>
-        // </div>
-        <HeadScreen title={titles[0]} />
+        <HeadScreen title={titles[0]} descAgency={descAgency} descAbout={descAbout} />
       )
     }
 

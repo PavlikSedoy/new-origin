@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import Container from '../Container/Container'
+// import Container from '../Container/Container'
 import SocialIcon from '../SocialIcon/SocialIcon'
 import Hamburger from '../Hamburger/Hamburger'
 import styles from './NavBar.module.scss'
@@ -51,7 +51,7 @@ export class NavBar extends Component {
     if (numberIsLoaded && socialIsLoaded && buttonIsLoaded) {
       return (
         <div className={styles.NavBar}>
-          <Container>
+          {/* <Container> */}
             <div className={styles.NavBar__container}>
               <div className={styles.NavBar__leftSide}>
                 {/* Logo */}
@@ -80,7 +80,7 @@ export class NavBar extends Component {
                 </div>
               </div>
             </div>
-          </Container>
+          {/* </Container> */}
         </div>
       )
     }
