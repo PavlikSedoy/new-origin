@@ -9,7 +9,7 @@ const HeadScreen = (props) => {
   const { title, descAgency, descAbout } = props
 
   return (
-    <section className={styles.HeadScreen}>
+    <section className={styles.HeadScreen} id="homeScreen">
       <Container>
         <div className={styles.HeadScreen__content}>
           <div className={styles.HeadScreen__titleWr}>
