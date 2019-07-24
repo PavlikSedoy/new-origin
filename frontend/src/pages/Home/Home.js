@@ -9,10 +9,7 @@ import styles from './Home.module.scss'
 
 export class Home extends Component {
   state = {
-    titles: {
-      id: '',
-      title: ''
-    },
+    titles: {},
     titlesIsLoaded: false,
     descriptions: {},
     descriptionsIsLoaded: false
@@ -30,7 +27,7 @@ export class Home extends Component {
 
     axios.get(`/wp-json/wp/v2/title-descriptions?order=asc`)
       .then(res => this.setState({
-        descriptions: res.data.map(desc => desc.acf.title_description_text),
+        descriptions: res.data.map(desc => desc),
         descriptionsIsLoaded: true
       }))
       .catch(err => console.log(err))
@@ -54,31 +51,29 @@ export class Home extends Component {
 
   // Get current title
   getCurrentTitle = id => {
-    let currentTitle = this.state.titles.filter(title => title.id === id)
-    // currentTitle = currentTitle.title.rendered
+    const currentTitle = this.state.titles.filter(desc => desc.id === id)
     return currentTitle[0].title.rendered
+  }
 
-    console.log(currentTitle[0].title.rendered)
+  // Get current description
+  getCurrentDesc = id => {
+    const currentDesc = this.state.descriptions.filter(title => title.id === id)
+    return currentDesc[0].acf.title_description_text
   }
 
   render() {
-    const { titles, titlesIsLoaded, descriptions, descriptionsIsLoaded } = this.state
+    const { title, titlesIsLoaded, descriptions, descriptionsIsLoaded } = this.state
     const descAgency = descriptions[0]
     const descAbout = descriptions[1]
-
-    // console.log(titles)
-
-    // const homeTitle = titles.find(x => x.id === 6).foo
-
-    // console.log(titles.map(title => title.id))
-
-    // console.log(homeTitle)
 
     if (titlesIsLoaded && descriptionsIsLoaded) {
       return (
         <>
-        {/* {this.getTitleTest(6)} */}
-          <HeadScreen title={this.getCurrentTitle(6)} descAgency={descAgency} descAbout={descAbout} />
+          <HeadScreen
+            title={this.getCurrentTitle(6)}
+            descAgency={this.getCurrentDesc(35)}
+            descAbout={this.getCurrentDesc(36)}
+          />
           <Portfolio />
         </>
       )
