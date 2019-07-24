@@ -6,7 +6,7 @@ import style from './Portfolio.module.scss'
 
 class Portfolio extends Component {
   render() {
-    let visiblePortfolio = (isVisible) => {
+    const visiblePortfolio = (isVisible) => {
       var tlBottomMenu = new TimelineMax({})
 
       if (isVisible) {
@@ -17,16 +17,10 @@ class Portfolio extends Component {
     }
 
     return (
-      <VisibilitySensor minTopValue={100} partialVisibility='top'>
-        {({isVisible}) =>
-          <>
-            {visiblePortfolio(isVisible)}
-
+      <VisibilitySensor minTopValue={100} partialVisibility='top' onChange={visiblePortfolio}>
             <section className={style.Portfolio}>
               ddd
             </section>
-          </>
-        }
       </VisibilitySensor>
     );
   }

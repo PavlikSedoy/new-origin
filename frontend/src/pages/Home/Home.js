@@ -9,7 +9,10 @@ import styles from './Home.module.scss'
 
 export class Home extends Component {
   state = {
-    titles: {},
+    titles: {
+      id: '',
+      title: ''
+    },
     titlesIsLoaded: false,
     descriptions: {},
     descriptionsIsLoaded: false
@@ -20,7 +23,7 @@ export class Home extends Component {
 
     axios.get(`/wp-json/wp/v2/home_titles?order=asc`)
       .then(res => this.setState({
-        titles: res.data.map(title => title.title.rendered),
+        titles: res.data.map(title => title),
         titlesIsLoaded: true
       }))
       .catch(err => console.log(err))
@@ -49,15 +52,33 @@ export class Home extends Component {
     }
   }
 
+  // Get current title
+  getCurrentTitle = id => {
+    let currentTitle = this.state.titles.filter(title => title.id === id)
+    // currentTitle = currentTitle.title.rendered
+    return currentTitle[0].title.rendered
+
+    console.log(currentTitle[0].title.rendered)
+  }
+
   render() {
     const { titles, titlesIsLoaded, descriptions, descriptionsIsLoaded } = this.state
     const descAgency = descriptions[0]
     const descAbout = descriptions[1]
 
+    // console.log(titles)
+
+    // const homeTitle = titles.find(x => x.id === 6).foo
+
+    // console.log(titles.map(title => title.id))
+
+    // console.log(homeTitle)
+
     if (titlesIsLoaded && descriptionsIsLoaded) {
       return (
         <>
-          <HeadScreen title={titles[0]} descAgency={descAgency} descAbout={descAbout} />
+        {/* {this.getTitleTest(6)} */}
+          <HeadScreen title={this.getCurrentTitle(6)} descAgency={descAgency} descAbout={descAbout} />
           <Portfolio />
         </>
       )

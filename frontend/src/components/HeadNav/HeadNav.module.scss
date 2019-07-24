@@ -8,9 +8,9 @@
 
   &__wr {
     position: relative;
-    background-color: $blackColor;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
   }
 
   &__item {
@@ -29,6 +29,7 @@
     text-decoration: none;
     font-weight: 700;
     line-height: 1;
+    background-color: $blackColor;
 
     &:last-child {
       background-color: $redColor;
