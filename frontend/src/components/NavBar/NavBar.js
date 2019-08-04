@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-// import { Controller, Scene } from 'react-scrollmagic'
-// import { Tween, Timeline } from 'react-gsap'
-// import Container from '../Container/Container'
 import SocialIcon from '../SocialIcon/SocialIcon'
 import Hamburger from '../Hamburger/Hamburger'
 import styles from './NavBar.module.scss'
@@ -54,61 +51,38 @@ export class NavBar extends Component {
       return (
         <>
           <div id="triggerElem" className={styles.NavBar__trigger}></div>
-          {/* <Controller>
-            <Scene
-              triggerElement="#triggerElem"
-              // duration={0}
-              offset={200}
-              triggerHook="onLeave"
-              // pin='.NavBar_NavBar__Cqnef'
-            >
-              {(progress) => (
-                <Tween  
-                  from={{
-                    opacity: .5,
-                  }}       
-                  ease="Strong.easeOut"
-                  // progress={0}
-                  totalProgress={progress}
-                  paused
-                  duration={10000}
-                > */}
-                  <div className={styles.NavBar}>
-                    {/* <Container> */}
-                      <div className={styles.NavBar__container}>
-                        <div className={styles.NavBar__leftSide}>
-                          {/* Logo */}
-                          <Link to="/" className={styles.NavBar__logo_link}>
-                            <img src={Logo} alt="Origin Web Agency" className={styles.NavBar__logo} />
-                          </Link>
-                          <div className={styles.NavBar__phoneAndSocial}>
-                            {/* Phone number */}
-                            <div className={styles.NavBar__phone}>
-                              <a href={"tel:" + headNumber} className={styles.NavBar__phoneLink}>{headNumber}</a>
-                            </div>
-                            {/* Social icons */}
-                            <div className={styles.NavBar__social}>
-                              { social.map(social => <SocialIcon key={social.id} icon={social} />) }
-                            </div>
-                          </div>
-                        </div>
-                        <div className={styles.NavBar__rightSide}>
-                          {/* Consultation */}
-                          <div className={styles.NavBar__consultation}>
-                            <button className={styles.NavBar__consultation_btn}>{firstButton}</button>
-                          </div>
-                          {/* Hamburger */}
-                          <div className={styles.NavBar__hamburger}>
-                            <Hamburger />
-                          </div>
-                        </div>
+            <div className={styles.NavBar}>
+              {/* <Container> */}
+                <div className={styles.NavBar__container}>
+                  <div className={styles.NavBar__leftSide}>
+                    {/* Logo */}
+                    <Link to="/" className={styles.NavBar__logo_link}>
+                      <img src={Logo} alt="Origin Web Agency" className={styles.NavBar__logo} />
+                    </Link>
+                    <div className={styles.NavBar__phoneAndSocial}>
+                      {/* Phone number */}
+                      <div className={styles.NavBar__phone}>
+                        <a href={"tel:" + headNumber} className={styles.NavBar__phoneLink}>{headNumber}</a>
                       </div>
-                    {/* </Container> */}
+                      {/* Social icons */}
+                      <div className={styles.NavBar__social}>
+                        { social.map(social => <SocialIcon key={social.id} icon={social} />) }
+                      </div>
+                    </div>
                   </div>
-                {/* </Tween>    
-              )}
-            </Scene>
-          </Controller> */}
+                  <div className={styles.NavBar__rightSide}>
+                    {/* Consultation */}
+                    <div className={styles.NavBar__consultation}>
+                      <button className={styles.NavBar__consultation_btn}>{firstButton}</button>
+                    </div>
+                    {/* Hamburger */}
+                    <div className={styles.NavBar__hamburger}>
+                      <Hamburger />
+                    </div>
+                  </div>
+                </div>
+              {/* </Container> */}
+            </div>
         </>
       )
     }

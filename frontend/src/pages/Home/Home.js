@@ -3,9 +3,9 @@ import HeadScreen from '../../components/HeadScreen/HeadScreen'
 import Portfolio from '../../components/Portfolio/Portfolio'
 import axios from 'axios'
 // import * as ScrollMagic from 'scrollmagic'
-import { TweenMax, TimelineMax } from 'gsap'
+import { TimelineMax } from 'gsap'
 // import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap'
-import styles from './Home.module.scss'
+import './Home.module.scss'
 
 export class Home extends Component {
   state = {
@@ -18,6 +18,7 @@ export class Home extends Component {
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll)
 
+    // Get Tittles
     axios.get(`/wp-json/wp/v2/home_titles?order=asc`)
       .then(res => this.setState({
         titles: res.data.map(title => title),
@@ -25,6 +26,7 @@ export class Home extends Component {
       }))
       .catch(err => console.log(err))
 
+    // Get descriptions
     axios.get(`/wp-json/wp/v2/title-descriptions?order=asc`)
       .then(res => this.setState({
         descriptions: res.data.map(desc => desc),
@@ -62,9 +64,7 @@ export class Home extends Component {
   }
 
   render() {
-    const { title, titlesIsLoaded, descriptions, descriptionsIsLoaded } = this.state
-    const descAgency = descriptions[0]
-    const descAbout = descriptions[1]
+    const { titlesIsLoaded, descriptionsIsLoaded } = this.state
 
     if (titlesIsLoaded && descriptionsIsLoaded) {
       return (
@@ -74,7 +74,11 @@ export class Home extends Component {
             descAgency={this.getCurrentDesc(35)}
             descAbout={this.getCurrentDesc(36)}
           />
-          <Portfolio />
+          <Portfolio
+            title={this.getCurrentTitle(7)}
+            firstDesc={this.getCurrentDesc(37)}
+            secondDesc={this.getCurrentDesc(38)}
+          />
         </>
       )
     }
