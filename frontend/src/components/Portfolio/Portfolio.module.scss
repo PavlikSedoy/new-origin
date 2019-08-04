@@ -3,6 +3,19 @@
 .Portfolio {
   position: relative;
   font-family: $ralewayFont;
+  padding-bottom: 80px;
+
+  // Right side low bg
+  &:after {
+    position: absolute;
+    content: '';
+    right: 0;
+    bottom: 160px;
+    height: 70%;
+    width: 340px;
+    background-color: rgba($headNavGrayColor, 1);
+    z-index: -1;
+  }
 
   //!!! Wrapper inside container
   &__wrapper {

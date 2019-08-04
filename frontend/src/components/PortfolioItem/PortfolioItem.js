@@ -10,7 +10,6 @@ export default class PortfolioItem extends Component {
 
   render() {
     const { project }  = this.props
-    console.log(project)
 
     return (
       <article className={styles.PortfolioItem}>

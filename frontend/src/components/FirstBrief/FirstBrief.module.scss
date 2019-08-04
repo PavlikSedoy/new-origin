@@ -1,0 +1,71 @@
+@import '../../vars';
+
+.FirstBrief {
+  position: relative;
+  background-color: rgba($grayTextColor, 1);
+  padding: 150px 0;
+
+  // White Bg
+  &:before {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 0;
+    height: 230px;
+    width: 500px;
+    background-color: $whiteColor;
+  }
+
+  // Title
+  &__title {
+    position: relative;
+    display: block;
+    max-width: 560px;
+    font-family: $montserratFont;
+    color: $whiteColor;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1.3;
+    z-index: 2;
+  }
+
+  // !!! Image
+  &__bgImgWr {
+    position: absolute;
+    right: 240px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+
+    // left bottom square
+    &:before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 120px;
+      height: 120px;
+      background-color: rgba($grayTextColor, 1);
+    }
+    
+    // Darken bg
+    &:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($grayTextColor, .8);
+    }
+  }
+
+  // !!! Button
+  &__btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 360px;
+    height: 100px;
+  }
+}
