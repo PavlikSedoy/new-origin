@@ -82,7 +82,7 @@ export class Home extends Component {
             secondDesc={this.getCurrentDesc(38)}
           />
           <FirstBrief title={this.getCurrentTitle(61)} />
-          <Services />
+          <Services title={this.getCurrentTitle(8)} />
         </>
       )
     }
