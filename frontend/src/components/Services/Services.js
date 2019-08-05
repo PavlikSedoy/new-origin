@@ -103,10 +103,11 @@ export default class Services extends Component {
     const { slides, currentSlide, slidesIsLoaded } = this.state
     const { title } = this.props
     const windowWidth = document.body.clientWidth
-    const buttomLineWidth = (windowWidth - 150)/this.getSlidesCount(slides)
+    const buttomLineWidth = ((windowWidth - 150)/this.getSlidesCount(slides)).toFixed(2)
+    const leftPosButtomLIne = currentSlide*buttomLineWidth - buttomLineWidth ? currentSlide*buttomLineWidth - buttomLineWidth : 0
     const bottomLine = {
       position: 'absolute',
-      left: currentSlide*buttomLineWidth - buttomLineWidth,
+      left: leftPosButtomLIne,
       bottom: 0,
       width: buttomLineWidth,
       height: 2,

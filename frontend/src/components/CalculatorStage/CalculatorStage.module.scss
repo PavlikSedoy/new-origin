@@ -1,0 +1,98 @@
+@import '../../vars';
+
+.CalculatorStage {
+  position: relative;
+  font-family: $montserratFont;
+  display: flex;
+
+  // Numbers side (left)
+  &__countStagesSide {
+    position: relative;
+    flex-basis: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &:after {
+      position: absolute;
+      content: '';
+      top: 18px;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background-color: $grayTextColor;
+    }
+  }
+
+  &__stageNumber {
+    font-weight: bold;
+    font-size: 21px;
+    letter-spacing: 2.1px;
+    color: $redColor;
+    margin-top: 9px;
+  }
+
+  // Content side (right)
+  &__contentSide {
+    position: relative;
+    flex-basis: calc(100% - 65px);
+  }
+
+  &__stageTitle {
+    margin-left: 40px;
+    font-size: 34px;
+    font-weight: bold;
+    color: $blackColor;
+    display: block;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 0;
+      transform: translate(-45px, -50%);
+      width: 9px;
+      height: 9px;
+      background-color: $redColor;
+      border-radius: 50%;
+    }
+  }
+
+  // Answer
+  &__answerWr {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+
+    &:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 50%;
+      transform: translate(-9px, -50%);
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: $whiteColor;
+      border: 1px solid $redColor;
+    }
+  }
+
+  &__answer {
+    position: relative;
+    padding: 15px 50px;
+    font-size: 14px;
+    opacity: .2;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    color: $blackColor;
+    text-transform: uppercase;
+    margin-top: 45px;
+    margin-bottom: 45px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
