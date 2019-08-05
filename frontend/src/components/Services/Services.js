@@ -102,6 +102,17 @@ export default class Services extends Component {
 
     const { slides, currentSlide, slidesIsLoaded } = this.state
     const { title } = this.props
+    const windowWidth = document.body.clientWidth
+    const buttomLineWidth = (windowWidth - 150)/this.getSlidesCount(slides)
+    const bottomLine = {
+      position: 'absolute',
+      left: currentSlide*buttomLineWidth - buttomLineWidth,
+      bottom: 0,
+      width: buttomLineWidth,
+      height: 2,
+      backgroundColor: 'rgb(225, 37, 27)',
+      zIndex: 3
+    }
 
     return (
       <section className={style.Services}>
@@ -115,17 +126,19 @@ export default class Services extends Component {
               { slides.map((slide, key) => this.slide(slide, key) ) }
 
               <div className={style.Slider__controlsWr}>
-                    <div className={style.Slider__slideNumbers}>
-                      { this.getSliderControls(slidesIsLoaded, slides, currentSlide) }
-                    </div>
-                    <div className={style.Slider__arrows}>
-                      <SlideArrows
-                        currentSlide={currentSlide}
-                        totalSlides={ this.getSlidesCount(slides) }
-                        callbackArrowClick={this.callbackArrowClick}
-                      />
-                    </div>
-                  </div>
+                <div className={style.Slider__slideNumbers}>
+                  { this.getSliderControls(slidesIsLoaded, slides, currentSlide) }
+                </div>
+                <div className={style.Slider__arrows}>
+                  <SlideArrows
+                    currentSlide={currentSlide}
+                    totalSlides={ this.getSlidesCount(slides) }
+                    callbackArrowClick={this.callbackArrowClick}
+                  />
+                </div>
+              </div>
+
+              <div style={bottomLine}></div>
             </div>
           </div>
         </div>
