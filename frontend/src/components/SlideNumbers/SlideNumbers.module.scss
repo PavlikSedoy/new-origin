@@ -1,0 +1,24 @@
+@import '../../vars';
+
+.SlideNumbers {
+  position: relative;
+  display: flex;
+
+  &__item {
+    display: block;
+    font-family: $montserratFont;
+    font-size: 21px;
+    font-weight: bold;
+    letter-spacing: 2.1px;
+    color: rgba($grayTextColor, .4);
+    margin: 0 5px;
+
+    &:nth-child(2n) {
+      opacity: .3;
+    }
+  }
+
+  &__itemActive {
+    color: rgba($grayTextColor, 1);
+  }
+}

@@ -1,0 +1,147 @@
+@import '../../vars';
+
+.Services {
+  position: relative;
+  font-family: $ralewayFont;
+  padding-top: 400px;
+
+  // !!! Title
+  &__title {
+    font-family: $montserratFont;
+    font-size: 70px;
+    font-weight: 800;
+    color: rgba($grayTextColor, 1);
+    margin-left: 320px;
+  }
+
+  // !!! Slider
+  &__slider {
+    position: relative;
+    margin-top: 150px;
+  }
+}
+
+.Slider {
+  position: relative;
+
+  // Slider container
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 680px;
+    overflow: hidden;
+
+    &:before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: calc(100% - 150px);
+      height: 2px;
+      background-color: rgb(224, 224, 224);
+      z-index: 2;
+    }
+  }
+
+  // Slide
+  &__slide {
+    position: absolute;
+    width: 100%;
+    height: 680px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  // Active slide
+  &__slideActive {
+    position: absolute;
+    // background-color: red;
+  }
+
+  // !!! Image
+  &__imgWr {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 720px;
+    height: 600px;
+    z-index: 2;
+  }
+
+  // !!! Content And Controls
+  &__contentAndControls {
+    position: relative;
+    height: 550px;
+    width: calc(100% - 150px);
+    background-color: rgba($headNavGrayColor, 1);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  // !!! Controls
+  &__controlsWr {
+    width: 720px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__slideNumbers {
+    margin-left: 150px;
+  }
+
+  // !!! Content
+  &__contentWr {
+    flex-basis: calc(100% - 720px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    // padding-left: 100px;
+  }
+
+  &__content {
+    width: 410px;
+    padding-right: 30px;
+    
+    // Margin middle dots
+    &>div {
+      margin-top: 30px;
+    }
+  }
+
+  &__slideTitle {
+    font-family: $montserratFont;
+    font-size: 34px;
+    font-weight: bold;
+    color: rgba($grayTextColor, 1);
+    font-weight: bold;
+  }
+
+  &__slideDesc {
+    font-size: 19px;
+    line-height: 1.5;
+    letter-spacing: 1.9px;
+    color: $moduleDescColor;
+    margin: 4px 0;
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    padding: 0 35px;
+    color: rgba($grayTextColor, 1);
+    text-transform: uppercase;
+    font-family: $montserratFont;
+    letter-spacing: 1.6px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 35px;
+  }
+}

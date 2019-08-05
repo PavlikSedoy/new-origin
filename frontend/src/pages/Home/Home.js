@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import HeadScreen from '../../components/HeadScreen/HeadScreen'
 import Portfolio from '../../components/Portfolio/Portfolio'
 import FirstBrief from '../../components/FirstBrief/FirstBrief'
+import Services from '../../components/Services/Services'
 import axios from 'axios'
 // import * as ScrollMagic from 'scrollmagic'
 import { TimelineMax } from 'gsap'
@@ -81,6 +82,7 @@ export class Home extends Component {
             secondDesc={this.getCurrentDesc(38)}
           />
           <FirstBrief title={this.getCurrentTitle(61)} />
+          <Services />
         </>
       )
     }
