@@ -34,20 +34,18 @@ export default class Calculator extends Component {
   getCalculator = stages => {
     let stageId = 0
 
-    if (this.state.stagesIsLoaded) return (
-      <div className={style.Calculator__calcWr} id="calculatorWr">
-        { stages.map((stage, key) => {
-          stageId++
-          return (
-            <CalculatorStage
-              key={key}
-              stage={stage}
-              stageId={stageId}
-            />
-          )
-        }) }
-      </div>
-    )
+    if (this.state.stagesIsLoaded) {
+      stageId = 1
+
+      return (
+        <div className={style.Calculator__calcWr} id="calculatorWr">
+              <CalculatorStage
+                // stage={stage}
+                stageId={1}
+              />
+        </div>
+      )
+    }
 
     return 'Loading...'
   }
