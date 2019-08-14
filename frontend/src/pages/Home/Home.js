@@ -87,7 +87,11 @@ export class Home extends Component {
           <Services title={this.getCurrentTitle(8)} />
           {/* Calculator */}
           {/* <Calculator /> */}
-          <About />
+          <About
+            title={this.getCurrentTitle(10)}
+            firstDesc={this.getCurrentDesc(76)}
+            secondDesc={this.getCurrentDesc(77)}
+          />
         </>
       )
     }

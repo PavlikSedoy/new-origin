@@ -2,7 +2,9 @@
 
 .About {
   position: relative;
+  overflow: hidden;
 
+  // BackGround
   &__imageBg {
     position: absolute;
     background-image: url('../../images/about_bg.jpg');
@@ -12,5 +14,45 @@
     left: 0;
     width: 100%;
     height: 820px;
+  }
+
+  // Content
+  &__contentWr {
+    margin-top: 570px;
+    position: relative;
+    float: right;
+    background-color: $whiteColor;
+    width: 790px;
+    padding: 80px;
+
+    // White bg outside container
+    &:after {
+      content: '';
+      position: absolute;
+      right: -50%;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background-color: $whiteColor;
+    }
+  }
+
+  &__title {
+    font-size: 70px;
+    font-weight: 800;
+    color: $blackColor;
+    margin: 0;
+  }
+
+  &__textWr {
+    font-family: $ralewayFont;
+    font-size: 19px;
+    line-height: 1.5;
+    letter-spacing: 1.9px;
+    color: $moduleDescColor;
+
+    &> div {
+      margin-top: 50px;
+    }
   }
 }

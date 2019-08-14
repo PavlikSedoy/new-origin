@@ -1,7 +1,11 @@
+@import './vars';
+@import './fonts';
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: $ralewayFont;
 }
 
 button {
@@ -15,4 +19,13 @@ button {
 
 a {
   text-decoration: none;
+}
+
+// Classes
+.redText {
+  color: $redColor;
+}
+
+.boldText {
+  font-weight: bold;
 }

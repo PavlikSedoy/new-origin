@@ -2,8 +2,11 @@ import React from 'react'
 import styles from './Dots.module.scss'
 
 const Dots = props => {
+  // console.log(props)
   return (
-    <div className={styles.Dots}>
+    <div
+      className={styles.Dots}
+    >
       { props.children }
       <div className={styles.Dots__container}>
         <span></span>
