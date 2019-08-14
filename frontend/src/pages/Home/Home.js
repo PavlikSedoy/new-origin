@@ -3,7 +3,8 @@ import HeadScreen from '../../components/HeadScreen/HeadScreen'
 import Portfolio from '../../components/Portfolio/Portfolio'
 import FirstBrief from '../../components/FirstBrief/FirstBrief'
 import Services from '../../components/Services/Services'
-import Calculator from '../../components/Calculator/Calculator'
+// import Calculator from '../../components/Calculator/Calculator'
+import About from '../../components/About/About'
 import axios from 'axios'
 // import * as ScrollMagic from 'scrollmagic'
 import { TimelineMax } from 'gsap'
@@ -84,7 +85,9 @@ export class Home extends Component {
           />
           <FirstBrief title={this.getCurrentTitle(61)} />
           <Services title={this.getCurrentTitle(8)} />
-          <Calculator />
+          {/* Calculator */}
+          {/* <Calculator /> */}
+          <About />
         </>
       )
     }

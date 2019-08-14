@@ -1,0 +1,16 @@
+@import '../../vars';
+
+.About {
+  position: relative;
+
+  &__imageBg {
+    position: absolute;
+    background-image: url('../../images/about_bg.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 820px;
+  }
+}
