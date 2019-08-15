@@ -2,6 +2,7 @@ import React from 'react'
 // import PropTypes from 'prop-types'
 import Container from '../Container/Container'
 import Dots from '../Dots/Dots'
+import SecondBrief from '../SecondBrief/SecondBrief'
 import styles from './About.module.scss'
 
 function About(props) {
@@ -25,6 +26,9 @@ function About(props) {
           </div>
         </div>
       </Container>
+      <div className={styles.About__brief}>
+        <SecondBrief />
+      </div>
     </section>
   )
 }
