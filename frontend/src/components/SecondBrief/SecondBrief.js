@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from '../Container/Container'
 import BriefBtn from '../BriefBtn/BriefBtn'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import styles from './SecondBrief.module.scss'
 
 function SecondBrief(props) {
@@ -9,7 +9,7 @@ function SecondBrief(props) {
     <div className={styles.SecondBrief}>
       <Container>
         <div className={styles.SecondBrief__text}>
-          Давайте приступим к созданию идеального сайта для Ваших целей
+          {props.title}
         </div>
       </Container>
       <div className={styles.SecondBrief__btn}>
@@ -19,9 +19,9 @@ function SecondBrief(props) {
   )
 }
 
-// SecondBrief.propTypes = {
-
-// }
+SecondBrief.propTypes = {
+  title: PropTypes.string.isRequired
+}
 
 export default SecondBrief
 

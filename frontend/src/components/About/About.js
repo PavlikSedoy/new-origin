@@ -1,12 +1,12 @@
 import React from 'react'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import Container from '../Container/Container'
 import Dots from '../Dots/Dots'
 import SecondBrief from '../SecondBrief/SecondBrief'
 import styles from './About.module.scss'
 
 function About(props) {
-  const { title, firstDesc, secondDesc } = props
+  const { title, firstDesc, secondDesc, briefTitle } = props
 
   return (
     <section className={styles.About}>
@@ -27,15 +27,18 @@ function About(props) {
         </div>
       </Container>
       <div className={styles.About__brief}>
-        <SecondBrief />
+        <SecondBrief title={briefTitle}/>
       </div>
     </section>
   )
 }
 
-// About.propTypes = {
-
-// }
+About.propTypes = {
+  title: PropTypes.string.isRequired,
+  firstDesc: PropTypes.string.isRequired,
+  secondDesc: PropTypes.string.isRequired,
+  briefTitle: PropTypes.string.isRequired,
+}
 
 export default About
 

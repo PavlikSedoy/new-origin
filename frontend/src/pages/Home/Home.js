@@ -91,6 +91,7 @@ export class Home extends Component {
             title={this.getCurrentTitle(10)}
             firstDesc={this.getCurrentDesc(76)}
             secondDesc={this.getCurrentDesc(77)}
+            briefTitle={this.getCurrentTitle(78)}
           />
         </>
       )
