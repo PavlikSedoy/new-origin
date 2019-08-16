@@ -115,7 +115,7 @@ export default class Services extends Component {
       zIndex: 3
     }
 
-    console.log(buttomLineWidth)
+    // console.log(buttomLineWidth)
 
     return (
       <section className={style.Services}>

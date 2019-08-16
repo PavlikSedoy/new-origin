@@ -5,6 +5,7 @@ import FirstBrief from '../../components/FirstBrief/FirstBrief'
 import Services from '../../components/Services/Services'
 // import Calculator from '../../components/Calculator/Calculator'
 import About from '../../components/About/About'
+import Faq from '../../components/Faq/Faq'
 import axios from 'axios'
 // import * as ScrollMagic from 'scrollmagic'
 import { TimelineMax } from 'gsap'
@@ -72,7 +73,7 @@ export class Home extends Component {
 
     if (titlesIsLoaded && descriptionsIsLoaded) {
       return (
-        <>
+      <>
           <HeadScreen
             title={this.getCurrentTitle(6)}
             descAgency={this.getCurrentDesc(35)}
@@ -92,6 +93,9 @@ export class Home extends Component {
             firstDesc={this.getCurrentDesc(76)}
             secondDesc={this.getCurrentDesc(77)}
             briefTitle={this.getCurrentTitle(78)}
+          />
+          <Faq
+            title={this.getCurrentTitle(11)}
           />
         </>
       )

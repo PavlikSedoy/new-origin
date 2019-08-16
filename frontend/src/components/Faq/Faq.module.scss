@@ -1,0 +1,187 @@
+@import '../../vars';
+
+.Faq {
+  position: relative;
+
+  // Right Background
+  &__rightBg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba($headNavGrayColor, 1);
+    width: 600px;
+    height: 100%;
+  }
+
+  // Title
+  &__titleWr {
+    padding-top: 370px;
+    position: relative;
+    max-width: 500px;
+  }
+
+  &__title {
+    font-family: $montserratFont;
+    font-weight: 800;
+    font-size: 70px;
+    line-height: 1.3;
+    color: $blackColor;
+  }
+
+  //!!! Faq Content
+  &__contentWr {
+    display: flex;
+    margin-top: 130px;
+
+    &>div {
+      flex-basis: 50%;
+    }
+  }
+  //!!! Answers
+  &__answers {
+    // display: flex;
+    // align-items: center;
+    position: relative;
+  }
+
+  &__answerItem {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+
+    h4, div {
+      margin-right: 15px;
+    }
+
+    h4 {
+      color: $redColor;
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    div {
+      color: $moduleDescColor;
+      font-size: 19px;
+      line-height: 1.5;
+      letter-spacing: 1.9px;
+      margin-top: 25px;
+    }
+  }
+
+  &__activeAnswerItem {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  //!!! Questions
+  &__questionItem {
+    position: relative;
+    display: flex;
+    color: $grayTextColor;
+    font-family: $montserratFont;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 1.3;
+    transition: .3s ease;
+    margin-top: 70px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: $blackColor;
+
+      .Faq__questionIcon span {
+        border-color: $blackColor;
+
+        &:before, &:after {
+          background-color: $blackColor;
+        }
+      }
+    }
+  }
+
+  // Active question
+  &__activeQuestionItem {
+    color: $blackColor;
+
+    &:hover {
+      color: $grayTextColor;
+
+      .Faq__questionIcon span {
+        border-color: $grayTextColor;
+
+        &:before, &:after {
+          background-color: $grayTextColor;
+        }
+      }
+    }
+
+    .Faq__questionIcon {
+      span {
+        border-color: $redColor;
+
+        &:before, &:after {
+          background-color: $redColor;
+          opacity: 1;
+        }
+
+        &:after {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
+  // Plus or Minus icon
+  &__questionIcon {
+    display: block;
+    position: relative;
+    flex-basis: 50px;
+
+    span {
+      display: block;
+      width: 35px;
+      height: 35px;
+      border: 1px solid $grayTextColor;
+      border-radius: 50%;
+      margin-top: 4px;
+      transition: .3s ease;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 9px;
+        top: 22px;
+        width: 20px;
+        height: 1px;
+        background-color: $grayTextColor;
+        transition: .3s ease;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 9px;
+        top: 22px;
+        width: 20px;
+        height: 1px;
+        background-color: $grayTextColor;
+        transition: .3s ease;
+        opacity: 0;
+      }
+    }
+  }
+
+  &__questionText {
+    flex-basis: calc(100% - 50px);
+  }
+}
