@@ -6,6 +6,7 @@ import Services from '../../components/Services/Services'
 // import Calculator from '../../components/Calculator/Calculator'
 import About from '../../components/About/About'
 import Faq from '../../components/Faq/Faq'
+import Request from '../../components/Request/Request'
 import axios from 'axios'
 // import * as ScrollMagic from 'scrollmagic'
 import { TimelineMax } from 'gsap'
@@ -97,6 +98,7 @@ export class Home extends Component {
           <Faq
             title={this.getCurrentTitle(11)}
           />
+          <Request />
         </>
       )
     }

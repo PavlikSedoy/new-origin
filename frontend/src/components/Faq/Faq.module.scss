@@ -32,6 +32,7 @@
   &__contentWr {
     display: flex;
     margin-top: 130px;
+    padding-bottom: 85px;
 
     &>div {
       flex-basis: 50%;
@@ -114,13 +115,13 @@
     color: $blackColor;
 
     &:hover {
-      color: $grayTextColor;
+      // color: $grayTextColor;
 
       .Faq__questionIcon span {
-        border-color: $grayTextColor;
+        border-color: $redColor;
 
         &:before, &:after {
-          background-color: $grayTextColor;
+          background-color: $redColor;
         }
       }
     }
