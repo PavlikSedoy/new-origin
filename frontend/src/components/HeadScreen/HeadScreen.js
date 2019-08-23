@@ -4,7 +4,7 @@ import VisibilitySensor from "react-visibility-sensor"
 import { TimelineMax } from 'gsap'
 import Container from '../Container/Container'
 import HeadNav from '../HeadNav/HeadNav'
-import Dots from '../Dots/Dots'
+// import Dots from '../Dots/Dots'
 import styles from './HeadScreen.module.scss'
 
 const visiblePortfolio = isVisible => {
@@ -32,10 +32,10 @@ const HeadScreen = (props) => {
             </div>
 
             <div className={styles.HeadScreen__desc}>
-              <Dots>
+              {/* <Dots> */}
                 <h5 className={styles.HeadScreen__agencyName}>{descAgency}</h5>
                 <div className={styles.HeadScreen__headDesc}>{descAbout}</div>
-              </Dots>
+              {/* </Dots> */}
             </div>
           </div>
         </Container>

@@ -6,6 +6,7 @@ import { play, exit } from './timelines'
 // import { TweenMax, TimelineMax } from 'gsap'
 // import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap'
 import Home from './pages/Home/Home'
+import Services from './pages/Services/Services'
 import WebSites from './pages/WebSites/WebSites'
 import NotFound from './pages/NotFound/NotFound'
 import NavBar from './components/NavBar/NavBar'
@@ -48,6 +49,7 @@ function App() {
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/websites" component={WebSites} />
+                <Route exact path="/services" component={Services} />
                 <Route component={NotFound} />
               </Switch>
             </Transition>

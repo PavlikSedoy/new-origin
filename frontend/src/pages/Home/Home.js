@@ -9,7 +9,7 @@ import Faq from '../../components/Faq/Faq'
 import Request from '../../components/Request/Request'
 import axios from 'axios'
 // import * as ScrollMagic from 'scrollmagic'
-import { TimelineMax } from 'gsap'
+import { TimelineMax, CSSRulePlugin } from 'gsap/all'
 // import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap'
 import './Home.module.scss'
 
@@ -40,20 +40,24 @@ export class Home extends Component {
       }))
       .catch(err => console.log(err))
   }
-
+z
   // Function on scroll page
   handleScroll() {
     var tlNavBar = new TimelineMax({})
+
+    const rule = CSSRulePlugin.getRule('.NavBar_NavBar__phone__1lyQQ::after')
 
     // NavBar animation on scroll
     if(window.pageYOffset > 100) {
       tlNavBar.to(".NavBar_NavBar__leftSide__3Q2mz", .5, {height:60})
       tlNavBar.to(".NavBar_NavBar__rightSide__3kkar", .5, {height:60}, '=-.5')
       tlNavBar.to(".NavBar_NavBar__Cqnef", .5, {borderBottom: '1px solid rgba(0,0,0,0.05)'}, '=-1')
+      // tlNavBar.to( CSSRulePlugin.getRule('.NavBar_NavBar__phone__1lyQQ:after'), .3, { cssRule: {width:'100%', opacity:1}}, 0)
     } else {
       tlNavBar.to(".NavBar_NavBar__leftSide__3Q2mz", .5, {height:115})
       tlNavBar.to(".NavBar_NavBar__rightSide__3kkar", .5, {height:115}, '=-.5')
       tlNavBar.to(".NavBar_NavBar__Cqnef", .5, {borderBottom: 'none'}, '=-1')
+      // tlNavBar.to( CSSRulePlugin.getRule('.NavBar_NavBar__phone__1lyQQ:after'), .3, { cssRule: {width:'0%'}}, '=-1')
     }
   }
 
